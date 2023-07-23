@@ -1,42 +1,141 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html,
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #2b283a;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h1,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.56rem;
+}
+
+h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h4,
+p,
+a {
+  font-size: 0.625rem;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+.header--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background-color: #f55a5a;
+  color: #fff;
+  font-weight: 500;
+  padding: 1em 0;
+}
+
+.header--icon {
+  font-size: 1.25rem;
+}
+
+.destinations--container {
+  width: 80%;
+  margin: 2.9em auto;
+  max-width: 800px;
+}
+
+.destination {
+  border-bottom: solid 1px #f5f5f5;
+  padding: 1.125em 0;
+  column-gap: 1em;
+  display: grid;
+
+  grid-template-areas:
+    "img location"
+    "img title"
+    "img dates"
+    "img description";
+
+  grid-template-rows: 20% 30% 10% 40%;
+}
+
+.destination:last-child {
+  border: none;
+}
+
+.destination--img {
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  grid-area: img;
+}
+
+.destination--location {
+  grid-area: location;
+  display: flex;
+  align-items: center;
+}
+
+.location--icon {
+  font-size: 0.5em;
+  margin-right: 0.5em;
+  color: #f55a5a;
+}
+
+.destination--location > p {
+  margin-right: 0.7em;
+  letter-spacing: 1.741px;
+  text-transform: uppercase;
+}
+
+.destination--location > a {
+  color: #918e9b;
+}
+
+.destination--location > a:hover {
+  color: #2b283a;
+  font-weight: 700;
+}
+
+.destination--title {
+  grid-area: title;
+}
+
+.destination--dates {
+  grid-area: dates;
+}
+
+.destination--descr {
+  margin: 0.5em 0;
+  grid-area: description;
+}
+
+@media (min-width: 768px) {
+  h4,
+  p,
+  a {
+    font-size: 0.875rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .destination--img {
+    width: 150px;
+    height: 202px;
+    border-radius: 5px;
+    grid-area: img;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
