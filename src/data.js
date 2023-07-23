@@ -8,7 +8,7 @@ export default [
     endDate: "17 Mar, 2023",
     description:
       "Mompiche is a small fishing community in the Ecuadorian province of Esmeraldas. It is famous for its white sand beaches, excellent food and warm waters",
-    imageUrl: "../public/images/mompiche.jpg",
+    imageUrl: "../images/mompiche.jpg",
   },
   {
     id: 1,
